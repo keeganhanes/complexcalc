@@ -42,9 +42,15 @@ class Calculator {
         return lhs / rhs
     }
     
-    /*
-    public func mathOp(lsh: Int, rhs: Int, op: Int) -> Int {
-        return 1
+    public func count(_ numbers: [Int]) -> Int {
+        return numbers.count
     }
-    */
+    
+    public func avg(_ numbers: [Int]) -> Int {
+        return calc.add(numbers) / calc.count(numbers)
+    }
+    
+    public func mathOp(lhs: Int, rhs: Int, op: (Int, Int) -> Int) -> Int {
+        return op(lhs, rhs)
+    }
 }
