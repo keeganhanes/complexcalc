@@ -22,10 +22,34 @@ class Calculator {
         return total
     }
     
+    public func add(lhs: (Int, Int), rhs: (Int, Int)) -> (Int, Int) {
+        let x = lhs.0 + rhs.0
+        let y = lhs.1 + rhs.1
+        return (x, y)
+    }
+    
+    public func add(lhs: [String: Int], rhs: [String: Int]) -> [String: Int] {
+        let x = lhs["x"]! + rhs["x"]!
+        let y = lhs["y"]! + rhs["y"]!
+        return ["x": x, "y": y]
+    }
+
     public func subtract(lhs: Int, rhs: Int) -> Int {
         return lhs - rhs
     }
     
+    public func subtract(lhs: (Int, Int), rhs: (Int, Int)) -> (Int, Int) {
+        let x = lhs.0 - rhs.0
+        let y = lhs.1 - rhs.1
+        return (x, y)
+    }
+    
+    public func subtract(lhs: [String: Int], rhs: [String: Int]) -> [String: Int] {
+        let x = lhs["x"]! - rhs["x"]!
+        let y = lhs["y"]! - rhs["y"]!
+        return ["x": x, "y": y]
+    }
+
     public func multiply(lhs: Int, rhs: Int) -> Int {
         return lhs * rhs
     }
