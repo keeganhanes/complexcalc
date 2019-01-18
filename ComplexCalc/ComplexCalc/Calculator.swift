@@ -53,4 +53,12 @@ class Calculator {
     public func mathOp(lhs: Int, rhs: Int, op: (Int, Int) -> Int) -> Int {
         return op(lhs, rhs)
     }
+    
+    public func mathOp(args: [Int], beg: Int, op: (Int, Int) -> Int) -> Int {
+        var total = beg
+        for number in args {
+            total = op(total, number)
+        }
+        return total
+    }
 }

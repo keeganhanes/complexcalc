@@ -30,7 +30,6 @@ assert(calc.count([]) == 0)
 assert(calc.avg([2, 2, 2, 2, 2, 2]) == 2)
 assert(calc.avg([1, 2, 3, 4, 5]) == 3)
 assert(calc.avg([1]) == 1)
-/*
 
 assert(calc.mathOp(args: [1, 2, 3], beg: 0, op: { $0 + $1 }) == 6)
     // this is (((0 op 1) op 2) op 3)
@@ -39,6 +38,7 @@ assert(calc.mathOp(args: [1, 2, 3, 4, 5], beg: 0, op: { $0 + $1 }) == 15)
 assert(calc.mathOp(args: [1, 1, 1, 1, 1], beg: 1, op: { $0 * $1 }) == 1)
     // this is (((((1 op 1) op 1) op 1) op 1) op 1)
 
+/*
 let p1 = (5, 5)
 let p2 = (12, -27)
 let p3 = (-4, 4)
